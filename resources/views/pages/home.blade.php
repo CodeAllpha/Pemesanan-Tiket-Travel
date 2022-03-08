@@ -90,7 +90,7 @@ Traveler
                 </p>
               </div>
               <div class="col md-8 text-center">
-                <img src="frontend/image/partner.jpg" alt="Logo Partner" class="img-partner">
+                <img src="frontend/image/partner.png" alt="Logo Partner" class="img-partner">
               </div>
             </div>
           </div>

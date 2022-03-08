@@ -56,7 +56,7 @@
                                         <td>Picture</td>
                                         <td>Name</td>
                                         <td>Region</td>
-                                        <td>Weapon</td>
+                                        <td>Visa</td>
                                         <td>Artifact</td>
                                         <td></td>
                                     </tr>
@@ -77,7 +77,7 @@
                                         {{$detail->region}}
                                     </td>
                                     <td class="align-middle">
-                                        {{$detail->is_weapon ? 'On': 'Off'}}
+                                        {{$detail->is_visa ? 'On': 'Off'}}
                                     </td>
                                     <td class="align-middle">
                                         {{\Carbon\Carbon::createFromDate($detail->date_time) > \Carbon\Carbon::now()? 'Active' : 'Inactive'}}
@@ -117,11 +117,11 @@
                                 id="region" placeholder="Region">
 
 
-                                <label for="is_weapon" class="sr-only">Weapon</label>
+                                <label for="is_visa" class="sr-only">visa</label>
                                 <select
-                                    name="is_weapon"
-                                    id="inputWeapon" class="custom-select mb-2 mr-sm-2" required>
-                                    <option value="" selected>Weapon</option>
+                                    name="is_visa"
+                                    id="inputvisa" class="custom-select mb-2 mr-sm-2" required>
+                                    <option value="" selected>visa</option>
                                     <option value="1">On</option>
                                     <option value="0">Off</option>
                                 </select>
@@ -161,9 +161,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th width="50%">Addinational Weapon</th>
+                                <th width="50%">Addinational Visa</th>
                                 <td width="50%" class="text-right">
-                                    {{$item->additional_weapon}}
+                                    {{$item->additional_visa}}
                                 </td>
                             </tr>
                             <tr>

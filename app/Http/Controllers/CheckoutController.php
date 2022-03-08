@@ -27,7 +27,7 @@ class CheckoutController extends Controller
         $transaction = Transaction::create([
             'travel_packages_id' => $id,
             'users_id' => Auth::user()->id,
-            'additional_weapon' => 0,
+            'additional_visa' => 0,
             'transaction_total' => $travel_package->price,
             'transaction_status' => 'IN_CART'
         ]);
@@ -36,7 +36,7 @@ class CheckoutController extends Controller
             'transactions_id' => $transaction->id,
             'username' => Auth::user()->username,
             'region' => 'ID',
-            'is_weapon' => false,
+            'is_visa' => false,
             'date_time' => Carbon::now()->addYears(5)
         ]);
 
@@ -53,7 +53,7 @@ class CheckoutController extends Controller
         if($item->is_visa)
         {
             $transaction->transaction_total -= 190;
-            $transaction->additional_weapon -= 190;
+            $transaction->additional_visa -= 190;
         }
 
         $transaction->transaction_total -= $transaction->travel_package->price;
@@ -68,7 +68,7 @@ class CheckoutController extends Controller
     {
         $request->validate([
             'username' => 'required|string|exists:users,username',
-            'is_weapon' => 'required|boolean',
+            'is_visa' => 'required|boolean',
             'date-time' => 'required',
         ]);
 
@@ -82,7 +82,7 @@ class CheckoutController extends Controller
         if($request->is_visa)
         {
             $transaction->transaction_total += 190;
-            $transaction->additional_weapon += 190;
+            $transaction->additional_visa += 190;
         }
 
         $transaction->transaction_total += $transaction->travel_package->price;

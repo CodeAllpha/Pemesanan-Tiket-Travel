@@ -21,7 +21,7 @@
                         <td>ID</td>
                         <td>Travel</td>
                         <td>User</td>
-                        <td>Weapon</td>
+                        <td>Visa</td>
                         <td>Total</td>
                         <td>Status</td>
                         <td>Artifact</td>
@@ -33,7 +33,7 @@
                         <td>{{$item->id}}</td>
                         <td>{{$item->travel_package->title}}</td>
                         <td>{{$item->user->name}}</td>
-                        <td>{{$item->additional_weapon}}</td>
+                        <td>{{$item->additional_visa}}</td>
                         <td>{{$item->transaction_total}}</td>
                         <td>{{$item->transaction_status}}</td>
                         <td>

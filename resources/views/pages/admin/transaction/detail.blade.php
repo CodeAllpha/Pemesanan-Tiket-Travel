@@ -38,8 +38,8 @@
                 <td>{{$item->user->name}}</td>
             </tr>
             <tr>
-                <th>Additional Weapon</th>
-                <td>${{$item->additional_weapon}}</td>
+                <th>Additional Visa</th>
+                <td>${{$item->additional_visa}}</td>
             </tr>
             <tr>
                 <th>Total Transaksi</th>
@@ -56,7 +56,7 @@
                         <th>ID</th>
                         <th>Name</th>
                         <th>Region</th>
-                        <th>Weapon</th>
+                        <th>Visa</th>
                         <th>Date & Time</th>
                     </tr>
                     @foreach ($item->details as $detail)
@@ -64,7 +64,7 @@
                             <td>{{$detail->id}}</td>
                             <td>{{$detail->username}}</td>
                             <td>{{$detail->region}}</td>
-                            <td>{{$detail->is_weapon ? '30 Days' : 'N/A'}}</td>
+                            <td>{{$detail->is_visa ? '30 Days' : 'N/A'}}</td>
                             <td>{{$detail->date_time}}</td>
                         </tr>
                     @endforeach

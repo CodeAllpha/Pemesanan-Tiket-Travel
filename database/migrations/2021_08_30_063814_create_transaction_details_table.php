@@ -18,7 +18,7 @@ class CreateTransactionDetailsTable extends Migration
             $table->integer('transactions_id');
             $table->string('username');
             $table->string('region');
-            $table->boolean('is_weapon');
+            $table->boolean('is_visa');
             $table->date('date_time');  
             $table->softDeletes();
             $table->timestamps();
